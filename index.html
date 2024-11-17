@@ -1,84 +1,117 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraCop</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraCop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<!-- header -->
-<header>
+  <!-- header -->
+  <header>
     <nav class="navbar">
-        <ul>
-            <li class="navbar"> <a href="">inicio</a></li>
-        </ul>
+      <img class="logo" src="loggo.jpg" alt="">
+      <ul>
+        <a href="">inicio</a>
+      </ul>
     </nav>
-</header>
+  </header>
 
 
-<main>
-<section>
-  <form class="form"  action="" method="post">
-    <label for="Presentacion">Presentacion del escrito de acusacion:</label>
-    <input type="date" id="Presentacion" name="Presentacion" required>
+  <main id="mainDiv">
+    <section>
+      <form class="form" action="" method="post">
+        <label for="Presentacion">Presentacion del escrito de acusacion:</label>
+        <br>
+        <input type="date" id="Presentacion" name="Presentacion" required>
 
-    <br><br>
-    <label for="Reparto">Reparto del escrito de acusacion:</label>
-    <input type="date" id="Reparto" name="Reparto" required>
+        <br><br>
+        <label for="Reparto">Reparto del escrito de acusacion:</label>
+        <br>
+        <input type="date" id="Reparto" name="Reparto" required>
 
-    <br><br>
-    <label for="Avoca">Avoca conocimiento:</label>
-    <input type="date" id="Avoca" name="Avoca" required>
-
-
-    
-    <div id="FechaAudiencia">
-    <br><br>
-    <label for="Audiencia_1">Audiencia preparatoria 1:</label>
-    <input type="date" id="Audiencia_1" name="Audiencia_1" >
-
-    </div>
-
-    <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
-
-
-    <br><br>
-    <label for="acusacion">audiencia de acusacion: </label>
-    <input type="date" id="acusacion" name="acusacion" required>
-
-    <br><br>
-    <label for="Juicio">audiencia de Juicio oral </label>
-    <input type="date" id="Juicio" name="Juicio" required>
-
-
-    <br><br>
-    <div class="funtion">
-        <input type="submit" value="Calcular">
-      </div>
-
-
-      <br><br>
-    <label for="total_dias">Total dias: </label>
-
-
-  </form>
+        <br><br>
+        <label for="Avoca">Avoca conocimiento:</label>
+        <br>
+        <input type="date" id="Avoca" name="Avoca" required>
 
 
 
-</section>
+        <div id="FechaAudiencia">
+          <br><br>
+          <label for="Audiencia_1">Audiencia preparatoria:</label>
+          <br>
+          <input type="date" id="Audiencia_1" name="Audiencia_1">
 
-<section>
+        </div>
 
-</section>
-
-</main>
+        <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
 
 
+        <br><br>
+        <label for="acusacion">Audiencia de acusacion: </label>
+        <input type="date" id="acusacion" name="acusacion" required>
 
-<!-- Footer -->
-<footer>
+        <br><br>
+        <label for="Juicio">Audiencia de Juicio oral </label>
+        <input type="date" id="Juicio" name="Juicio" required>
+
+
+        <br><br>
+        <div class="funtion">
+          <input type="submit" value="Calcular">
+        </div>
+
+
+        <br><br>
+        <label for="total_dias">Total dias: </label>
+
+
+      </form>
+
+
+
+    </section>
+
+    <section>
+      <table>
+        <tr>
+          <th>rango</th>
+          <th>dias</th>
+        </tr>
+        <tr>
+          <td>de Presentacion a Reparto</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>de Reparto a conocimiento</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>de conocimiento a audiencia preparatoria</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>de audiencia preparatoria a audiencia de acusacion </td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>de audiencia de acusacion a Juicio oral</td>
+          <td>?</td>
+        </tr>
+        
+        </table>
+    </section>
+
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer>
     <div class="footer">
       <p>© Angel Meriño 2024 Company, Inc.</p>
       <p>
@@ -89,4 +122,5 @@
     </div>
   </footer>
 </body>
+
 </html>
