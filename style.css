@@ -16,7 +16,7 @@
     background-color: #ddd;
     color: black;
   }
-  
+
 /* Estilos básicos para el footer */
 .footer {
     background-color: #333;
@@ -36,4 +36,16 @@
   }
   .footer a:hover {
     color: #ddd;
+  }
+
+/* Estilos básicos para el formulario */
+  .form {
+  
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 16px;
+    text-align: center;
+    width: 300px;
   }
