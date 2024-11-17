@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraCop</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -20,12 +21,37 @@
 <main>
 <section>
   <form class="form"  action="" method="post">
-    <label for="fecha_inicio">Fecha de Inicio:</label>
-    <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+    <label for="Presentacion">Presentacion del escrito de acusacion:</label>
+    <input type="date" id="Presentacion" name="Presentacion" required>
 
     <br><br>
-    <label for="fecha_final">Fecha de Final:</label>
-    <input type="date" id="fecha_final" name="fecha_final" required>
+    <label for="Reparto">Reparto del escrito de acusacion:</label>
+    <input type="date" id="Reparto" name="Reparto" required>
+
+    <br><br>
+    <label for="Avoca">Avoca conocimiento:</label>
+    <input type="date" id="Avoca" name="Avoca" required>
+
+
+    
+    <div id="FechaAudiencia">
+    <br><br>
+    <label for="Audiencia_1">Audiencia preparatoria 1:</label>
+    <input type="date" id="Audiencia_1" name="Audiencia_1" >
+
+    </div>
+
+    <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
+
+
+    <br><br>
+    <label for="acusacion">audiencia de acusacion: </label>
+    <input type="date" id="acusacion" name="acusacion" required>
+
+    <br><br>
+    <label for="Juicio">audiencia de Juicio oral </label>
+    <input type="date" id="Juicio" name="Juicio" required>
+
 
     <br><br>
     <div class="funtion">
