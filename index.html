@@ -1,129 +1,97 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraCorp</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AuraCorp</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar">
+        <img class="logo" src="loggo.jpg" alt="" />
 
-<body>
+        <ul>
+          <a href="">inicio</a>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- header -->
-  <header>
-    <nav class="navbar">
-      
-      <img class="logo" src="loggo.jpg" alt="">
-    
-      <ul>
-        <a href="">inicio</a>
-      </ul>
-    </nav>
-  </header>
+    <main id="mainDiv">
+      <section>
+        <form class="form" action="" method="post"
+          onsubmit="procesarFechas(event)">
 
+          <h3>Calcula Días Transcurridos</h3>
+          <br />
+          
+          <!-- par 1 -->
+          <div class="conjunto-fechas">
+            <label for="fechaInicio1">Presentacion del escrito de acusacion:</label>
+            <input type="date" class="fechaInicio" value="2024-11-01" required /><br />
+            <br />
+            <label for="fechaFin1">Reparto del escrito de acusacion:</label>
+            <input type="date" class="fechaFin" value="2024-11-03" required  /><br /><br />
+          </div>
 
-  <main id="mainDiv">
-    <section>
-      <form class="form" action="" method="post">
-        <label for="Presentacion">Presentacion del escrito de acusacion:</label>
-        <br>
-        <input type="date" id="Presentacion" name="Presentacion" required>
+          <!-- par 2 -->
+          <div class="conjunto-fechas">
+            <label for="fechaInicio2">Avoca conocimiento:</label><br />
+            <input type="date" class="fechaInicio"  value="2024-11-06" required /><br />
+            <br />
+            <label for="fechaFin2">Audiencia preparatoria:</label><br />
+            <input type="date" class="fechaFin" value="2024-11-09" required /><br />
+            <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
+            <br /><br />
+          </div>
 
-        <br><br>
-        <label for="Reparto">Reparto del escrito de acusacion:</label>
-        <br>
-        <input type="date" id="Reparto" name="Reparto" required>
+          <!-- par 3 -->
+          <div class="conjunto-fechas">
+            <label for="fechaInicio3">Audiencia de acusacion:</label><br />
+            <input type="date" class="fechaInicio"  value="2024-11-12" required /><br />
+            <br />
+            <label for="fechaFin3">Audiencia de Juicio oral: </label><br />
+            <input type="date" class="fechaFin"  value="2024-11-15" required /><br /><br />
+          </div>
 
-        <br><br>
-        <label for="Avoca">Avoca conocimiento:</label>
-        <br>
-        <input type="date" id="Avoca" name="Avoca" required>
+          
+          <br /><br />
+          <div class="funtion">
+            <input type="submit" value="Calcular" />
+          </div>
 
+          <br /><br />
+          <label for="total_dias" onclick="compararFechas()"
+            >Total dias:
+          </label>
+        </form>
 
-
-        <div id="FechaAudiencia">
-          <br><br>
-          <label for="Audiencia_1">Audiencia preparatoria:</label>
-          <br>
-          <input type="date" id="Audiencia_1" name="Audiencia_1">
-
-        </div>
-
-        <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
-
-
-        <br><br>
-        <label for="acusacion">Audiencia de acusacion: </label>
-        <input type="date" id="acusacion" name="acusacion" required>
-
-        <br><br>
-        <label for="Juicio">Audiencia de Juicio oral </label>
-        <input type="date" id="Juicio" name="Juicio" required>
-
-
-        <br><br>
-        <div class="funtion">
-          <input type="submit" value="Calcular">
-        </div>
-
-
-        <br><br>
-        <label for="total_dias" onclick="compararFechas()">Total dias: </label>
-
-
-      </form>
-      <p id="resultado"></p>
-
-
-
-    </section>
-
-    <section>
-      <table>
-        <tr>
-          <th>rango</th>
-          <th>dias</th>
-        </tr>
-        <tr>
-          <td>de Presentacion a Reparto</td>
-          <td>?</td>
-        </tr>
-        <tr>
-          <td>de Reparto a conocimiento</td>
-          <td>?</td>
-        </tr>
-        <tr>
-          <td>de conocimiento a audiencia preparatoria</td>
-          <td>?</td>
-        </tr>
-        <tr>
-          <td>de audiencia preparatoria a audiencia de acusacion </td>
-          <td>?</td>
-        </tr>
-        <tr>
-          <td>de audiencia de acusacion a Juicio oral</td>
-          <td>?</td>
-        </tr>
         
+      </section>
+
+    
+
+  
+
+      <section>
+        <table id="resultados">
+          
         </table>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>© Angel Meriño 2024 Company, Inc.</p>
-      <p>
-        <a href="#inicio">Inicio</a> |
-        <a href="#sobre-nosotros">Sobre Nosotros</a> |
-        <a href="#servicios">Servicios</a> | <a href="#contacto">Contacto</a>
-      </p>
-    </div>
-  </footer>
-</body>
-
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <p>© Angel Meriño 2024 Company, Inc.</p>
+        <p>
+          <a href="#inicio">Inicio</a> |
+          <a href="#sobre-nosotros">Sobre Nosotros</a> |
+          <a href="#servicios">Servicios</a> | <a href="#contacto">Contacto</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
