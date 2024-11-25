@@ -32,7 +32,6 @@ function procesarFechas(event) {
     const fechaInicio = conjunto.querySelector(".fechaInicio").value;
     const fechaFin = conjunto.querySelector(".fechaFin").value;
 
-    const resultadoParrafo2 = document.createElement("tr");
     const resultadoParrafo = document.createElement("td");
     if (fechaInicio && fechaFin) {
       const dias = calcularDiasTranscurridos(fechaInicio, fechaFin);
