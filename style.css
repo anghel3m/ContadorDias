@@ -2,18 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-
-#mainDiv{
-  margin-left: 20;
-  display:inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-html{
   font-family:sans-serif, Courier, monospace
+
 }
+
+ 
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 /* Estilos básicos para la barra de navegación */
 nav {
@@ -62,35 +61,52 @@ nav {
 }
 
 /* Estilos básicos para el formulario y la tabla */
-.form {
+
+.content-form{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom: 1px solid #ddd;
+  gap: 20px;
+
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1%;
-  padding: 5%;
+  margin: 20px;
+  padding: 16px;
   text-align: center;
-  width: 90%;
+}
+form{
+   border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 16px;
+  text-align: center;}
+
+.content-form button{
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #333;
+  padding: 12px 24px;
 }
 
 table {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 5%;
-  padding: 5%;
-  text-align: center;
-  width: 90%;
-}
-
-th,td {
-  border: 1px solid black;
+  height:fit-content;
   border-collapse: collapse;
+  margin-top: 20px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
 }
 th,
 td {
-  padding: 8px;
-  text-align: left;
+  padding: 10px;
+  text-align: center;
 }
+
 
 /* Estilos básicos para el logo */
 
@@ -101,3 +117,7 @@ td {
   margin: 1%;
 
 }
+
+
+
+ 

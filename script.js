@@ -12,37 +12,27 @@ function agregaFechaAudiencia() {
   document.getElementById("FechaAudiencia").appendChild(nuevoDiv);
 }
 // 1ra------------------------------------------------------------------
-function calcularDiasTranscurridos(fechaInicio, fechaFin) {
-  const fecha1 = new Date(fechaInicio);
-  const fecha2 = new Date(fechaFin); // Calcula la diferencia en milisegundos
-  const diferencia = fecha2 - fecha1; // Convierte la diferencia de milisegundos a días
-  const diasTranscurridos = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
-  return diasTranscurridos;
-}
-
-
-function procesarFechas(event) {
-
-  event.preventDefault(); // Evita el envío del formulario
-  
-  const resultadosDiv = document.getElementById("resultados");
-  resultadosDiv.innerHTML = ""; // Limpia resultados previos // Obtiene todos los conjuntos de fechas
-  const conjuntos = document.querySelectorAll(".conjunto-fechas");
-  conjuntos.forEach((conjunto, index) => {
-    const fechaInicio = conjunto.querySelector(".fechaInicio").value;
-    const fechaFin = conjunto.querySelector(".fechaFin").value;
-
-    const resultadoParrafo = document.createElement("td");
-    if (fechaInicio && fechaFin) {
-      const dias = calcularDiasTranscurridos(fechaInicio, fechaFin);
-      resultadoParrafo.innerText = `Conjunto ${
-        index + 1
-      }: Días transcurridos: ${dias}`;
-    } else {
-      resultadoParrafo.innerText = `Conjunto ${
-        index + 1
-      }: Por favor, seleccione ambas fechas.`;
-    }
-    resultadosDiv.appendChild(resultadoParrafo);
-  });
+function calculateDays() {
+  const dates = [
+    new Date(document.getElementById("date1").value),
+    new Date(document.getElementById("date2").value),
+    new Date(document.getElementById("date3").value),
+    new Date(document.getElementById("date4").value),
+    new Date(document.getElementById("date5").value),
+    new Date(document.getElementById("date6").value),
+  ];
+  let totalDays = 0;
+  const resultTableBody = document
+    .getElementById("resultTable")
+    .querySelector("tbody");
+  resultTableBody.innerHTML = "";
+  for (let i = 0; i < dates.length - 1; i++) {
+    const diffTime = Math.abs(dates[i + 1] - dates[i]);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    totalDays += diffDays;
+    const row = resultTableBody.insertRow();
+    row.insertCell(0).textContent = `Fecha ${i + 1} a Fecha ${i + 2}`;
+    row.insertCell(1).textContent = diffDays;
+  }
+  document.getElementById("totalDays").textContent = totalDays;
 }

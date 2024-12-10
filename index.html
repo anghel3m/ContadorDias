@@ -20,64 +20,47 @@
     </header>
 
     <main id="mainDiv">
-      <section>
-        <form class="form"
-          onsubmit="procesarFechas(event)">
-
-          <h3>Calcula Días Transcurridos</h3>
-          <br />
-          
-          <!-- par 1 -->
-          <div class="conjunto-fechas">
-            <label for="fechaInicio1">Presentacion del escrito de acusacion:</label>
-            <input type="date" class="fechaInicio" value="2024-11-01" required /><br />
-            <br />
-            <label for="fechaFin1">Reparto del escrito de acusacion:</label>
-            <input type="date" class="fechaFin" value="2024-11-03" required  /><br /><br />
-          </div>
-
-          <!-- par 2 -->
-          <div class="conjunto-fechas">
-            <label for="fechaInicio2">Avoca conocimiento:</label><br />
-            <input type="date" class="fechaInicio"  value="2024-11-06" required /><br />
-            <br />
-            <label for="fechaFin2">Audiencia preparatoria:</label><br />
-            <input type="date" class="fechaFin" value="2024-11-09" required /><br />
-            <button onclick="agregaFechaAudiencia()">Agregar audiencia</button>
-            <br /><br />
-          </div>
-
-          <!-- par 3 -->
-          <div class="conjunto-fechas">
-            <label for="fechaInicio3">Audiencia de acusacion:</label><br />
-            <input type="date" class="fechaInicio"  value="2024-11-12" required /><br />
-            <br />
-            <label for="fechaFin3">Audiencia de Juicio oral: </label><br />
-            <input type="date" class="fechaFin"  value="2024-11-15" required /><br /><br />
-          </div>
-
-          
-          <br /><br />
-          <div class="funtion">
-            <input type="submit" value="Calcular" />
-          </div>
-
-          <br /><br />
-          <label for="total_dias" onclick="compararFechas()"
-            >Total dias:
-          </label>
-        </form>
-
-        
-      </section>
-
     
+      <section class="content-form">
+      <form class="form" id="dateForm">
+        <h3>Calcula Días Transcurridos</h3><br>
+         <!-- par 1 -->
+        <label for="date1">Presentacion del escrito de acusacion:</label><br>
+        <input type="date" id="date1" required /><br /><br />
+        <label for="date2">Reparto del escrito de acusacion:</label><br>
+        <input type="date" id="date2" required /><br /><br />
+         <!-- par 2 -->
+        <label for="date3">Avoca conocimiento:</label><br>
+        <input type="date" id="date3" required /><br /><br />
+        <label for="date4">Audiencia preparatoria:</label><br>
+        <input type="date" id="date4" required /><br /><br>
+        <!-- par 3 -->
+        <label for="date5">Audiencia de acusacion:</label><br>
+        <input type="date" id="date5" required /><br /><br />
+        <label for="date6">Audiencia de Juicio oral: </label><br>
+        <input type="date" id="date6" required /><br /><br />
+         <!-- button -->
+        <button type="button" onclick="calculateDays()">Calcular Días</button>
+      </form>
+   
 
-      <section>
-        <table id="resultados">
-          
-        </table>
-      </section>
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th>Comparación</th>
+            <th>Días Transcurridos</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td>Total Días</td>
+            <td id="totalDays">0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+     
     </main>
 
     <!-- Footer -->
